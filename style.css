@@ -1,0 +1,421 @@
+/* =========================
+   CÀI ĐẶT CHUNG
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f5f7fb;
+}
+
+
+/* =========================
+   SKIP LINK
+   POSITION + FOCUS
+========================= */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+
+    background: yellow;
+    color: black;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    left: 20px;
+}
+
+
+/* =========================
+   HEADER + FLEXBOX
+========================= */
+
+header {
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 25px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER */
+
+.nav-links a:hover {
+    background: #222;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* FOCUS */
+
+.nav-links a:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 50px 25px;
+}
+
+
+/* =========================
+   TRANG CHỦ - CSS GRID
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    color: #555;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 13px 22px;
+
+    background: #222;
+    color: white;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ẢNH - BOX MODEL
+   BORDER
+   PADDING
+   BORDER-RADIUS
+   BOX-SHADOW
+========================= */
+
+img {
+    width: 100%;
+
+    display: block;
+
+    border: 5px solid #222;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER IMAGE */
+
+img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   ABOUT - GRID
+========================= */
+
+.about-grid {
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.about-text {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h1 {
+    font-size: 42px;
+}
+
+.about-text li {
+    margin: 10px 0;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-section h1 {
+    font-size: 45px;
+}
+
+
+/* CSS GRID - 3 CỘT */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================
+   GALLERY ITEM
+========================= */
+
+.gallery-item {
+    margin: 0;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER */
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   NTH-CHILD
+========================= */
+
+/* Ảnh thứ nhất */
+
+.gallery-item:nth-child(1) img {
+    border-radius: 10px;
+}
+
+
+/* Ảnh thứ hai */
+
+.gallery-item:nth-child(2) img {
+    border-radius: 20px;
+}
+
+
+/* Ảnh thứ ba */
+
+.gallery-item:nth-child(3) img {
+    border-radius: 30px;
+}
+
+
+/* Ảnh thứ tư */
+
+.gallery-item:nth-child(4) img {
+    border-radius: 40px;
+}
+
+
+/* Ảnh thứ năm */
+
+.gallery-item:nth-child(5) img {
+    border-radius: 50%;
+}
+
+
+/* =========================
+   FIGCAPTION
+========================= */
+
+.gallery-item figcaption {
+    margin-top: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    background: #222;
+    color: white;
+
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
